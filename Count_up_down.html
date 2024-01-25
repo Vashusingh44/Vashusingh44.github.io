@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We love counting</title>
+    <script>
+        // Taking count variable as 0
+        let count = 0;
+
+        // Increase the count by 1 and showing an alert display
+        function countUp() {
+            count++;
+            displayAlert();
+        }
+
+        // Decrease the count by 1 and showing an alert display
+        function countDown() {
+            count--;
+            displayAlert();
+        }
+
+        // Function to show an alert if the count is divisible by 5
+        function displayAlert() {
+            if (count % 5 === 0) {
+                alert('Count is divisible by 5!');
+                playAudio(); // Call the playAudio function when count is divisible by 5
+            }
+            else {
+                alert('Count: ' + count);
+            }
+        }
+
+        function playAudio() 
+        {
+            const audio = new Audio('audio.mp3');
+            audio.play();
+        }
+
+    </script>
+</head>
+<body>
+    <h1> Vashu's Count UP and Count Down Function!! </h1>
+    <p> When the count is divisible by 5 an audio plays </p>
+    <!-- Buttons for counting -->
+    <button onclick="countUp()">CountUp</button>
+    <button onclick="countDown()">CountDown</button>
+
+    <br>
+    <audio id="myAudio" style="display: none">
+        <source src="audio.mp3" type="audio/mp3">
+    </audio>
+    <br>
+
+    <a href="index.html">
+        Back to Index
+    </a>
+</body>
+</html>
