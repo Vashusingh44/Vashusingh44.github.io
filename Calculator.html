@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+</head>
+<body>
+    <h1>Scientific Calculator</h1>
+
+  <div class="Calculator">
+    <input type="text" id="inputArea" readonly>
+    <div class="buttons">
+      <button onclick="appendToInput('0')">0</button>
+      <button onclick="appendToInput('1')">1</button>
+      <button onclick="appendToInput('2')">2</button>
+      <button onclick="appendToInput('3')">3</button>
+      <button onclick="appendToInput('4')">4</button>
+      <button onclick="appendToInput('5')">5</button>
+    </div>
+    <div class="buttons_1">
+        <button onclick="appendToInput('6')">6</button>
+        <button onclick="appendToInput('7')">7</button>
+        <button onclick="appendToInput('8')">8</button>
+        <button onclick="appendToInput('9')">9</button>
+        <button onclick="appendToInput('.')">.</button>
+
+    </div>
+    <div class="operators">
+        <button onclick="appendToInput('+')">+</button>
+        <button onclick="appendToInput('-')">-</button>
+        <button onclick="appendToInput('*')">*</button>
+        <button onclick="appendToInput('/')">/</button>
+    </div>
+
+    <div class="additional-buttons">
+      <button onclick="deleteLastChar()">DEL</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="clearInput()">clear</button>
+    </div>
+    <br>
+    <div id="outputArea" class="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
