@@ -16,7 +16,7 @@ async function submitForm() {
             feedback: feedback
         };
         try {
-            const response = await fetch('https://feb13-lab6-default-rtdb.firebaseio.com/msg.json', {
+            const response = await fetch('https://comp165-default-rtdb.firebaseio.com/msg.json', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
